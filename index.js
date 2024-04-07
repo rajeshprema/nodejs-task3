@@ -5,6 +5,10 @@ const PORT = 9000;
 
 const app = express();
 //dbConnection();
+app.get("/", (req, res) => {
+  console.log("Hello");
+  res.send("Hello");
+});
 app.get("/mendar/all", async(req, res) => {
     try {
         const mendar = await client
